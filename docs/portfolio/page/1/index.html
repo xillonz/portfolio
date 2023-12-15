@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en" x-cloak class="scroll-smooth dark"
+x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+x-bind:class="{ 'dark': darkMode }"
+  >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <title> Portfolio </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto+Slab:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.3.3/dist/css/splide.min.css">
+
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/site.css" />
+    
+        
+
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/site.js"></script>
+        
+    </head>
+    <body>
+        <div class="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark md:pb-16 w-full">
+            <div
+    class="max-w-screen-xl w-full bg-light-gray dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-50 mx-auto">
+    <div class="w-full flex justify-between px-4">
+        <a href="/">
+            
+        </a>
+        <div class="flex items-center" x-data="{ show: false }">
+            <button id="" type="button" @click="darkMode = !darkMode" class="bg-white w-10 hover:text-white h-10 rounded-full lg:flex justify-center items-center text-black hover:bg-brand-red transition-all duration-300 ease-in-out cursor-pointer ml-2 dark-light-btn">
+                <i x-show="!darkMode" id="" x-cloak class="fa-solid text-xl fa-moon"></i>
+                <i x-show="darkMode" id="" x-cloak class="fa-solid fa-sun text-xl"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="menu-toggle-btn lg:hidden lg:opacity-0 lg:invisible visible opacity-100 bg-brand-red w-10 h-10 rounded-full flex justify-center cursor-pointer items-center text-white dark:text-white text-2xl ml-3" x-on:click="show = !show">
+                <svg  x-show="!show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg>
+                <svg  x-show="show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg>
+            </button>
+            <nav id="navbar" class="lg:hidden content" x-show="show">
+    <ul
+        class="block rounded-b-4xl shadow-md absolute left-0 top-20 z-100 w-full bg-white dark:bg-dark-tblack1">
+        
+        <li>
+            <a class=" mobile-menu-items  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/">
+                <span class="mr-2 text-xl">
+                    <i class="fa-regular fa-user"></i>
+                </span> About </a>
+        </li>
+        
+        <li>
+            <a class=" mobile-menu-items  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/resume">
+                <span class="mr-2 text-xl">
+                    <i class="fa-regular fa-file-lines"></i>
+                </span> Resume </a>
+        </li>
+        
+        <li>
+            <a class=" mobile-menu-items-active bg-gradient-to-r from-brand-orange to-brand-red text-white dark:text-white  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/portfolio">
+                <span class="mr-2 text-xl">
+                    <i class="fas fa-briefcase"></i>
+                </span> Works </a>
+        </li>
+        
+    </ul>
+</nav>
+        </div>
+    </div>
+</div>
+            <div class="max-w-screen-xl grid grid-cols-12 md:gap-10 justify-between lg:mt-32 mx-auto lg:px-5">
+                <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+    <div
+        class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-dark-tblack px-6 rounded-4xl mt-44 md:mt-56 lg:mt-0">
+        <img src="/assets/willo.jpg" alt="willo.jpg" height="240" width="240" class="w-60 absolute left-1/2 transform -translate-x-1/2 h-60 drop-shadow-xl mx-auto rounded-4xl -mt-36"
+             />
+        <div class="pt-24 pb-8">
+            <h2 class="mt-6 mb-1 text-26xl font-semibold dark:text-white"> Willo Hooper </h2>
+            <h3 class="mb-4 text-gray-2 inline-block dark:bg-dark-tblack1 px-5 py-1.5 rounded-lg dark:text-dark-gray-2">
+                Web Developer </h3>
+            <div class="flex justify-center space-x-3">
+                
+                <a href="https://www.linkedin.com/in/willo-hooper-91b95579/" target="_blank" rel="noopener noreferrer">
+                    <span style="color:#0072b1" class="socialbtn rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                </a>
+                
+                <a href="https://github.com/xillonz" target="_blank" rel="noopener noreferrer">
+                    <span style="color:#e14a84" class="socialbtn rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                </a>
+                
+            </div>
+            <div class="p-7 rounded-2xl mt-7 bg-light-gray dark:bg-dark-tblack1 divide-y divide-gary-4 dark:divide-dark-gray-4">
+                
+                
+                <a href="mailto:%77%61%76%65%40%77%69%6c%6c%6f%2e%63%6f%2e%6e%7a" class="group">
+                    <div class="flex py-2.5">
+                        <span style="color: #6AB5B9" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </span>
+
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> Email </p>
+                            <p class="dark:text-white group-hover:text-brand-orange bot-trap">wave@willo<b>.trap</b>.co.nz</p>
+                        </div>
+                    </div>
+                </a>
+                
+                
+                
+                <div class="group">
+                    <div class="flex py-2.5 border-t border-t-gary-4 dark:border-t-dark-gray-4">
+                        <span style="color: #FD7590" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md from-brand-orange to-brand-red">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> Location </p>
+                            <p class="dark:text-white">Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <a href="/assets/willo-hooper-resume-1702589703.pdf" download> 
+                <button class="dowanload-btn inline-flex items-center mx-auto bg-gradient-to-r from-brand-orange to-brand-red duration-200 transition ease-linear hover:bg-gradient-to-l from-brand-red to-brand-red-2 px-8 py-3 text-lg text-white rounded-5xl mt-6">
+                <img class="mr-3" src="/assets/dowanload.png" alt="dowanload.png" title="Icon" height="23" width="22" /> Download CV
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+                <div class="col-span-12 lg:col-span-8">
+                    <header class="lg:w-560 h-36 hidden lg:block p-8 ml-auto mb-10 rounded-2xl bg-white dark:bg-dark-tblack">
+    <nav class="hidden lg:block">
+        <ul class="flex gap-4">
+            
+            <li class="inline-block w-full">
+                <a class=" menu-item  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/">
+                    <span class="text-xl mb-1">
+                        <i class="fa-regular fa-user"></i>
+                    </span> About
+                </a>
+            </li>
+            
+            <li class="inline-block w-full">
+                <a class=" menu-item  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/resume">
+                    <span class="text-xl mb-1">
+                        <i class="fa-regular fa-file-lines"></i>
+                    </span> Resume
+                </a>
+            </li>
+            
+            <li class="inline-block w-full">
+                <a class=" menu-active bg-gradient-to-r from-brand-orange to-brand-red text-white dark:text-white  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/portfolio">
+                    <span class="text-xl mb-1">
+                        <i class="fas fa-briefcase"></i>
+                    </span> Works
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+                        <div>
+                            <div class="lg:rounded-2xl">
+                                
+
+
+    <section id="portfolio" class="bg-white lg:rounded-tl-2xl lg:rounded-tr-2xl dark:bg-dark-tblack" x-data="{ 'showModal': null }"
+    @keydown.escape="showModal = false">
+    <div class="container pb-8 px-4 sm:px-5 md:px-10 lg:px-14"
+        x-data="{categoryTab : 'future-focused'  }">
+        <div class="py-12 ">
+            <h2 class="after-effect text-4xl font-bold relative lg:after:'' after:absolute lg:after:top-1/2 lg:after:w-48 after:h-0.5 after:rounded-sm lg:after:bg-gradient-to-r from-brand-orange to-brand-red lg:after:left-48 lg:mt-0 dark:text-white">Portfolio</h2>
+            <ul
+                class="button-group isotop-menu-wrapper mt-8 flex w-full gap-8 justify-start md:justify-end flex-wrap font-medium">
+                
+                <li @click="categoryTab = 'future-focused'" class="fillter-btn cursor-pointer hover:text-brand-orange text-gary-5 dark:text-dark-gray-2"
+                    :class="{ 'is-checked text-brand-orange dark:text-brand-orange': categoryTab === 'future-focused' }" data-filter=".dev">Future Focused</li>
+                
+                <li @click="categoryTab = 'saas'" class="fillter-btn cursor-pointer hover:text-brand-orange text-gary-5 dark:text-dark-gray-2"
+                    :class="{ 'is-checked text-brand-orange dark:text-brand-orange': categoryTab === 'saas' }" data-filter=".dev">SaaS Apps</li>
+                
+                <li @click="categoryTab = 'social-media-apps'" class="fillter-btn cursor-pointer hover:text-brand-orange text-gary-5 dark:text-dark-gray-2"
+                    :class="{ 'is-checked text-brand-orange dark:text-brand-orange': categoryTab === 'social-media-apps' }" data-filter=".dev">Social Media Apps</li>
+                
+                <li @click="categoryTab = 'small-business'" class="fillter-btn cursor-pointer hover:text-brand-orange text-gary-5 dark:text-dark-gray-2"
+                    :class="{ 'is-checked text-brand-orange dark:text-brand-orange': categoryTab === 'small-business' }" data-filter=".dev">Small Business</li>
+                
+            </ul>
+        </div>
+        
+        
+        <div id="" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6 "
+            x-show="categoryTab === 'future-focused' " x-transition:enter.duration.400ms>
+            
+            
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '0'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="/assets/iu.png" alt="iu.png" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">Future Focused</span>
+                    
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '0'" rel="modal:open">Invisible Urban Charging</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '0'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            Invisible Urban Charging
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            <p>IU Charging is a growing startup aiming to drastically increase the availability of electric vehicle chargers throughout the US.</p><p>I led a team to build the backend software that would manage, connect to, and utilise all these new chargers. This includes APIs to communicate with the user app, admin management software to control the sites and charging stations. In particular, based on existing charging protocols, I built the middleware that would control the charging devices directly and get people&#039;s cars back on the road.</p>
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="/assets/iu.png"
+                            alt="iu.png" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '1'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="/assets/sp.png" alt="sp.png" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">Future Focused</span>
+                    
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '1'" rel="modal:open">Silicon Power Brand Proposal</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '1'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            Silicon Power Brand Proposal
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            <p><a href="https://sp.willo.co.nz/">Brand Demo</a></p><p>As part of an international marketing team, I helped design and plan an overhaul of Silicon Power&#039;s brand and tech organisation. This included redesigns of their website, packaging, marketing materials. On top of this I also built demonstration software for their internal data management and product communciation to improve business organisation.</p>
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="/assets/sp.png"
+                            alt="sp.png" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                
+                
+                <div class="list-unstyled gap-2 flex flex-wrap justify-center">
+                    
+                
+                </div>
+            
+            </div>
+
+            
+        </div>
+        
+        
+        <div id="" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6 "
+            x-show="categoryTab === 'saas' " x-transition:enter.duration.400ms>
+            
+            
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '0'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="/assets/puttiforms.png" alt="puttiforms.png" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">SaaS Apps</span>
+                    
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '0'" rel="modal:open">Putti Forms</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '0'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            Putti Forms
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            <p>PuttiForms is a form generation and business process management tool that boasts a large variety of features. It supports a large range of devices, including Android, iOS, Web, and Windows Devices.Intended to replace traditional paper based processes within business environments (think health and safety, HR, customer management), while leaving the survey space to existing form builders. The web application contained all the necessary features to build forms, with validation, customisable fields and submission reporting.
+More advanced features included dynamic tables with spreadsheet style calculation, GPS, user permissions, and notifications to manage work flows.Due to business users often having their own IT systems managing their data, a series of secure APIs were developed to allow customers to source their own data for form creation, as well as retrieving the resulting form submissions. The application was built as a monthly subscription service and also including a payment system and administrator backend.</p><p>  </p><p><strong>My Involvement:</strong></p><p>I developed PuttiForms over 3 years, designing the architecture, creating APIs and fully implementing the front and backend. The project started out with just me and a native developer. As the application picked up clients, I began to lead a larger team of developers to continue expanding product features and meet customer requirements.</p>
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="/assets/puttiforms.png"
+                            alt="puttiforms.png" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                
+                
+                <div class="list-unstyled gap-2 flex flex-wrap justify-center">
+                    
+                
+                </div>
+            
+            </div>
+
+            
+        </div>
+        
+        
+        <div id="" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6 "
+            x-show="categoryTab === 'social-media-apps' " x-transition:enter.duration.400ms>
+            
+            
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '0'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="/assets/haaalp!_pr.jpg" alt="haaalp!_pr.jpg" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">Social Media Apps</span>
+                    
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '0'" rel="modal:open">Haaalp!</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '0'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            Haaalp!
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            <p>Haaalp! is a mobile first PWA that helps people find assistance in their area. Whether it&#039;s offering to car pool to town, or asking a neighbour for sugar, Haaalp! provided an easy means to get the help you need.</p><p>It features location based services, live chat, social logins and a wholesome friendly design. I collaborated with a designer and project manager to build this from scratch during 2020 when people needed more haaalp than ever.</p>
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="/assets/haaalp!_pr.jpg"
+                            alt="haaalp!_pr.jpg" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                
+                
+                <div class="list-unstyled gap-2 flex flex-wrap justify-center">
+                    
+                
+                </div>
+            
+            </div>
+
+            
+        </div>
+        
+        
+        <div id="" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6 "
+            x-show="categoryTab === 'small-business' " x-transition:enter.duration.400ms>
+            
+            
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '0'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="/assets/frc.png" alt="frc.png" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">Small Business</span>
+                    
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '0'" rel="modal:open">Free Range Chef</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '0'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            Free Range Chef
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            <p>Freerangechef.co.nz is the online face of a New Zealand based catering company.</p><p>The website allows Freerange Chef customers to view the available products and services and make orders through the built in menu and shopping cart. It also includes contact forms, invoicing and all other standard features you would expect from a company website.</p><p>Also included is a custom content management service to allow Freerange Chef management to update their menu and prices, as well as add marketing and dietary tagging to the menu items. This is all done through an easy to use UI, backed up by secure admin authentication.</p>
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="/assets/frc.png"
+                            alt="frc.png" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                
+                
+                <div class="list-unstyled gap-2 flex flex-wrap justify-center">
+                    
+                
+                </div>
+            
+            </div>
+
+            
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+                                <footer class="overflow-hidden bg-slate-50 md:rounded-b-2xl dark:bg-black">
+    <p class="text-center py-6 text-gray-lite dark:text-dark-gray-2"> © 2023 All Rights Reserved by 
+        <a class="hover:text-brand-orange duration-300 transition" href=""
+            target="_blank" rel="noopener noreferrer">Willo Hooper</a>. </p>
+</footer>
+                            </div>
+                        </div>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" x-cloak class="scroll-smooth dark"
+x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+x-bind:class="{ 'dark': darkMode }"
+  >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <title> Silicon Power Brand Proposal </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto+Slab:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.3.3/dist/css/splide.min.css">
+
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/site.css" />
+    
+        
+
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/site.js"></script>
+        
+    </head>
+    <body>
+        <div class="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark md:pb-16 w-full">
+            <div
+    class="max-w-screen-xl w-full bg-light-gray dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-50 mx-auto">
+    <div class="w-full flex justify-between px-4">
+        <a href="/">
+            
+        </a>
+        <div class="flex items-center" x-data="{ show: false }">
+            <button id="" type="button" @click="darkMode = !darkMode" class="bg-white w-10 hover:text-white h-10 rounded-full lg:flex justify-center items-center text-black hover:bg-brand-red transition-all duration-300 ease-in-out cursor-pointer ml-2 dark-light-btn">
+                <i x-show="!darkMode" id="" x-cloak class="fa-solid text-xl fa-moon"></i>
+                <i x-show="darkMode" id="" x-cloak class="fa-solid fa-sun text-xl"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="menu-toggle-btn lg:hidden lg:opacity-0 lg:invisible visible opacity-100 bg-brand-red w-10 h-10 rounded-full flex justify-center cursor-pointer items-center text-white dark:text-white text-2xl ml-3" x-on:click="show = !show">
+                <svg  x-show="!show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg>
+                <svg  x-show="show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg>
+            </button>
+            <nav id="navbar" class="lg:hidden content" x-show="show">
+    <ul
+        class="block rounded-b-4xl shadow-md absolute left-0 top-20 z-100 w-full bg-white dark:bg-dark-tblack1">
+        
+        <li>
+            <a class=" mobile-menu-items  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/">
+                <span class="mr-2 text-xl">
+                    <i class="fa-regular fa-user"></i>
+                </span> About </a>
+        </li>
+        
+        <li>
+            <a class=" mobile-menu-items  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/resume">
+                <span class="mr-2 text-xl">
+                    <i class="fa-regular fa-file-lines"></i>
+                </span> Resume </a>
+        </li>
+        
+        <li>
+            <a class=" mobile-menu-items  rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red dark:text-dark-gray-2 text-sm"
+                href="/portfolio">
+                <span class="mr-2 text-xl">
+                    <i class="fas fa-briefcase"></i>
+                </span> Works </a>
+        </li>
+        
+    </ul>
+</nav>
+        </div>
+    </div>
+</div>
+            <div class="max-w-screen-xl grid grid-cols-12 md:gap-10 justify-between lg:mt-32 mx-auto lg:px-5">
+                <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+    <div
+        class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-dark-tblack px-6 rounded-4xl mt-44 md:mt-56 lg:mt-0">
+        <img src="/assets/willo.jpg" alt="willo.jpg" height="240" width="240" class="w-60 absolute left-1/2 transform -translate-x-1/2 h-60 drop-shadow-xl mx-auto rounded-4xl -mt-36"
+             />
+        <div class="pt-24 pb-8">
+            <h2 class="mt-6 mb-1 text-26xl font-semibold dark:text-white"> Willo Hooper </h2>
+            <h3 class="mb-4 text-gray-2 inline-block dark:bg-dark-tblack1 px-5 py-1.5 rounded-lg dark:text-dark-gray-2">
+                Web Developer </h3>
+            <div class="flex justify-center space-x-3">
+                
+                <a href="https://www.linkedin.com/in/willo-hooper-91b95579/" target="_blank" rel="noopener noreferrer">
+                    <span style="color:#0072b1" class="socialbtn rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                </a>
+                
+                <a href="https://github.com/xillonz" target="_blank" rel="noopener noreferrer">
+                    <span style="color:#e14a84" class="socialbtn rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                </a>
+                
+            </div>
+            <div class="p-7 rounded-2xl mt-7 bg-light-gray dark:bg-dark-tblack1 divide-y divide-gary-4 dark:divide-dark-gray-4">
+                
+                
+                <a href="mailto:%77%61%76%65%40%77%69%6c%6c%6f%2e%63%6f%2e%6e%7a" class="group">
+                    <div class="flex py-2.5">
+                        <span style="color: #6AB5B9" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </span>
+
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> Email </p>
+                            <p class="dark:text-white group-hover:text-brand-orange bot-trap">wave@willo<b>.trap</b>.co.nz</p>
+                        </div>
+                    </div>
+                </a>
+                
+                
+                
+                <div class="group">
+                    <div class="flex py-2.5 border-t border-t-gary-4 dark:border-t-dark-gray-4">
+                        <span style="color: #FD7590" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md from-brand-orange to-brand-red">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> Location </p>
+                            <p class="dark:text-white">Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <a href="/assets/willo-hooper-resume-1702589703.pdf" download> 
+                <button class="dowanload-btn inline-flex items-center mx-auto bg-gradient-to-r from-brand-orange to-brand-red duration-200 transition ease-linear hover:bg-gradient-to-l from-brand-red to-brand-red-2 px-8 py-3 text-lg text-white rounded-5xl mt-6">
+                <img class="mr-3" src="/assets/dowanload.png" alt="dowanload.png" title="Icon" height="23" width="22" /> Download CV
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+                <div class="col-span-12 lg:col-span-8">
+                    <header class="lg:w-560 h-36 hidden lg:block p-8 ml-auto mb-10 rounded-2xl bg-white dark:bg-dark-tblack">
+    <nav class="hidden lg:block">
+        <ul class="flex gap-4">
+            
+            <li class="inline-block w-full">
+                <a class=" menu-item  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/">
+                    <span class="text-xl mb-1">
+                        <i class="fa-regular fa-user"></i>
+                    </span> About
+                </a>
+            </li>
+            
+            <li class="inline-block w-full">
+                <a class=" menu-item  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/resume">
+                    <span class="text-xl mb-1">
+                        <i class="fa-regular fa-file-lines"></i>
+                    </span> Resume
+                </a>
+            </li>
+            
+            <li class="inline-block w-full">
+                <a class=" menu-item  w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="/portfolio">
+                    <span class="text-xl mb-1">
+                        <i class="fas fa-briefcase"></i>
+                    </span> Works
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+                        <div>
+                            <div class="lg:rounded-2xl">
+                                
+                                <footer class="overflow-hidden bg-slate-50 md:rounded-b-2xl dark:bg-black">
+    <p class="text-center py-6 text-gray-lite dark:text-dark-gray-2"> © 2023 All Rights Reserved by 
+        <a class="hover:text-brand-orange duration-300 transition" href=""
+            target="_blank" rel="noopener noreferrer">Willo Hooper</a>. </p>
+</footer>
+                            </div>
+                        </div>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>
