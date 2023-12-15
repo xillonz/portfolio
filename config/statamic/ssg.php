@@ -57,7 +57,8 @@ return [
     */
 
     'urls' => [
-        //
+        '/resume',
+        '/portfolio'
     ],
 
     /*
@@ -98,7 +99,7 @@ return [
     */
 
     'glide' => [
-        'directory' => 'img',
+        'directory' => 'assets',
         'override' => true,
     ],
 
