@@ -1,0 +1,29 @@
+tree:
+  -
+    id: 9e430ae9-f155-4102-bca9-2d0c9ebd85b2
+    entry: home
+    title: About
+    data:
+      nav_fa_icon: 'fa-regular fa-user'
+  -
+    id: 0678b321-c948-41a2-82d0-414546dfcbed
+    entry: c4a27912-e8db-4176-b6bf-53527d10e005
+    data:
+      nav_fa_icon: 'fa-regular fa-file-lines'
+  -
+    id: b5afd606-4f15-44fb-a6b9-fe916e5577ae
+    entry: d0eab246-b1c4-4d54-9a16-69a9aa4a21e9
+    title: Works
+    data:
+      nav_fa_icon: 'fas fa-briefcase'
+  -
+    id: 548607c1-25c1-408d-912e-db3bead56931
+    entry: 4586df79-5439-434c-a220-7956b5bec8c2
+    title: Blog
+    data:
+      nav_fa_icon: 'fa-brands fa-blogger'
+  -
+    id: 97719189-c627-461c-8dc4-63a03da66302
+    entry: bd78eb00-965c-4b6d-bd36-d70d8cc8fc6a
+    data:
+      nav_fa_icon: 'fa-solid fa-address-book'

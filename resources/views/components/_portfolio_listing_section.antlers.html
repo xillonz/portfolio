@@ -1,0 +1,145 @@
+<section id="portfolio" class="bg-white lg:rounded-tl-2xl lg:rounded-tr-2xl dark:bg-dark-tblack" x-data="{ 'showModal': null }"
+    @keydown.escape="showModal = false">
+    <div class="container pb-8 px-4 sm:px-5 md:px-10 lg:px-14"
+        x-data="{categoryTab : '{{select_category:0:slug}}'  }">
+        <div class="py-12 ">
+            <h2 class="after-effect text-4xl font-bold relative lg:after:'' after:absolute lg:after:top-1/2 lg:after:w-48 after:h-0.5 after:rounded-sm lg:after:bg-gradient-to-r from-brand-orange to-brand-red lg:after:left-48 lg:mt-0 dark:text-white">{{title}}</h2>
+            <ul
+                class="button-group isotop-menu-wrapper mt-8 flex w-full gap-8 justify-start md:justify-end flex-wrap font-medium">
+                {{select_category}}
+                <li @click="categoryTab = '{{slug}}'" class="fillter-btn cursor-pointer hover:text-brand-orange text-gary-5 dark:text-dark-gray-2"
+                    :class="{ 'is-checked text-brand-orange dark:text-brand-orange': categoryTab === '{{slug}}' }" data-filter=".dev">{{title}}</li>
+                {{/select_category}}
+            </ul>
+        </div>
+        {{select_category}}
+        {{ categorySlug = {slug} }}
+        <div id="" class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6 "
+            x-show="categoryTab === '{{categorySlug}}' " x-transition:enter.duration.400ms>
+            {{ collection:portfolio paginate="2" sort="date:desc" as="posts" taxonomy:portfolio_category='{categorySlug}'}}
+            {{posts}}
+            <div class="portfolio_list-two-items isotop-item branding">
+                <div class="rounded-lg bg-gray-10 dark:bg-transparent p-6 dark:border-2 border-dark-gray-3"
+                   >
+                    <div class="overflow-hidden rounded-lg">
+                        <a @click="showModal = '{{index}}'" rel="modal:open">
+                            <img class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                src="{{collection_image}}" alt="{{collection_image:title}}" title="portfolio image" height="292" width="203" />
+                        </a>
+                    </div>
+                    {{portfolio_category}}
+                    <span class="pt-5 text-sm font-normal text-gray-lite block dark:text-dark-gray-2">{{title}}</span>
+                    {{/portfolio_category}}
+                    <h2
+                        class="font-medium cursor-pointer text-xl duration-300 transition hover:text-brand-orange dark:hover:text-brand-orange dark:text-white mt-2">
+                        <a @click="showModal = '{{index}}'" rel="modal:open">{{title}}</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal inset-0 pt-10 z-10 h-full px-5"
+                x-show="showModal === '{{index}}'">
+                <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                    <div class="dark:scrollbarDark scrollbarLight overflow-y-auto max-h-[80vh]"
+                        @click.away="showModal = false">
+                        <h2 class="text-brand-red dark:hover:text-brand-orange text-4xl text-center font-bold">
+                            {{title}}
+                        </h2>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            {{details_grid}}
+                            {{if index == 0 || index == 2}}
+                            <div class="space-y-2">
+                            {{/if}}
+                                <p class="dark:text-white mt-2 flex items-center text-15xl sm:text-lg">
+                                <i 
+                                    class="{{if index == 0}}fa-regular fa-file-lines {{elseif index == 1}} fa-solid fa-code {{elseif index == 2}}fa-regular fa-user {{elseif index == 3}} fa-solid fa-arrow-up-right-from-square {{/if}} sm:text-lg hidden sm:block mr-4 md:text-xl">
+                                </i>
+                                    {{collection_project_name}} :&nbsp;
+                                    {{if index == 3}}
+                                    <span class="font-medium transition-all duration-300 ease-in-out hover:text-brand-red">
+                                        <a href="{{collection_site_link}}" target="_blank"
+                                            rel="noopener noreferrer">{{collection_project_description}}</a>
+                                    </span>
+                                    {{else}}
+                                    <span class="font-medium"> {{collection_project_description}}</span>
+                                    {{/if}}
+                                </p>
+                            {{if index == 1 || index == 3}}
+                            </div>
+                            {{/if}}
+                            {{/details_grid}}
+                        </div>
+                        <p class="dark:text-white text-2line font-normal text-15xl sm:text-sm">
+                            {{collection_description}}
+                        </p>
+                        <div class="pr-3">
+                            <img class="w-full md:h-450 h-auto object-cover rounded-xl mt-6" src="{{collection_image}}"
+                            alt="{{collection_image:title}}" height="714" width="450" />
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" rel="modal:close" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            {{/posts}}
+
+            <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                {{ paginate }}
+                {{ section:pagination }}
+                {{ if prev_page }}
+                {{ if current_page == 2 }}
+                <link rel="prev" href="{{ prev_page | substr(0,-7) }}">
+                {{ else }}
+                <link rel="prev" href="{{ prev_page }}">
+                {{ /if }}
+                {{ /if }}
+                {{ if next_page }}
+                <link rel="next" href="{{ next_page }}">
+                {{ /if }}
+                {{ /section:pagination }}
+                <div class="list-unstyled gap-2 flex flex-wrap justify-center">
+                    {{ if prev_page }}
+                        {{ if current_page == 2 }}
+                        
+                        <a href="{{ current_url }}" class=" {{ view:pageNumberClass }}  w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray mx-1 rounded-md shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray "><</a>
+                        {{ else }}
+                        <a href="{{ prev_page }}" class=" {{ view:pageNumberClass }}   w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray mx-1 rounded-md shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray "><</a>
+                        {{ /if }}
+                    {{ /if }}
+                {{ links:segments }}
+
+                    {{ first }}
+                    {{ partial:common_sections/pages}}
+                    {{ /first }}
+
+                    {{ if slider }}
+                    <span class="disabled">...</span>
+                    {{ /if }}
+
+                    {{ slider }}
+                    {{ partial:common_sections/pages}}
+                    {{ /slider }}
+
+                    {{ if slider || (!slider && last) }}
+                    <a href="#" class="disabled {{ view:pageNumberClass }}">...</a>
+                    {{ /if }}
+
+                    {{ last }}
+                    {{ partial:common_sections/pages}}
+                    {{ /last }}
+                    {{ if next_page }}
+                    <a href="{{ next_page }}" class=" {{ view:pageNumberClass }} w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray mx-1 rounded-md shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray">></a>
+                    {{ /if }}
+                {{ /links:segments }}
+                </div>
+            {{ /paginate }}
+            </div>
+
+            {{ /collection:portfolio }}
+        </div>
+        {{/select_category}}
+    </div>
+</section>
+
+
+

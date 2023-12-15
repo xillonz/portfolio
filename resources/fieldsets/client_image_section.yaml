@@ -1,0 +1,47 @@
+title: 'Client Image Section'
+fields:
+  -
+    handle: client_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: client_image_grid
+    field:
+      fields:
+        -
+          handle: client_image_grid_image
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Image
+            icon: assets
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            validate:
+              - image
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Client Image Grid'
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

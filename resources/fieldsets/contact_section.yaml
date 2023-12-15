@@ -1,0 +1,37 @@
+title: 'Contact Section'
+fields:
+  -
+    handle: contact_heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: contact_sub_heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Sub Heading'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: form_field
+    field:
+      max_items: 1
+      type: form
+      display: 'Form Field'
+      icon: form
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

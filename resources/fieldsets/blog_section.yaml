@@ -1,0 +1,14 @@
+title: 'Blog Section'
+fields:
+  -
+    handle: blog
+    field:
+      max_items: 1
+      mode: select
+      type: collections
+      display: Blog
+      icon: collections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

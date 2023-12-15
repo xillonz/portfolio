@@ -1,0 +1,107 @@
+title: 'Skills Knowledge Section'
+fields:
+  -
+    handle: skills_knowledge_section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: skills_grid
+    field:
+      fields:
+        -
+          handle: skill_name
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: 'Skill Name'
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+        -
+          handle: skill_bg_color
+          field:
+            allow_any: true
+            type: color
+            display: 'Bg Color'
+            icon: color
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            swatches:
+              - '#FF6464'
+              - '#9272d4'
+              - '#5185d4'
+              - '#ca56f2'
+        -
+          handle: skill_number
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Number
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            instructions: 'Number mode is the percentage'
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Skills Grid'
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: knowledge_title_1
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Title 1'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: knowledge_grid
+    field:
+      fields:
+        -
+          handle: knowledge_name
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Name
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Knowledge Grid'
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

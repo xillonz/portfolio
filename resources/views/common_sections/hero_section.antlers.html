@@ -1,0 +1,66 @@
+<div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+    <div
+        class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-dark-tblack px-6 rounded-4xl mt-44 md:mt-56 lg:mt-0">
+        <img src="{{hero_section:hero_image}}" alt="{{hero_section:hero_image:title}}" height="240" width="240" class="w-60 absolute left-1/2 transform -translate-x-1/2 h-60 drop-shadow-xl mx-auto rounded-4xl -mt-36"
+             />
+        <div class="pt-24 pb-8">
+            <h2 class="mt-6 mb-1 text-26xl font-semibold dark:text-white"> {{hero_section:hero_name}} </h2>
+            <h3 class="mb-4 text-gray-2 inline-block dark:bg-dark-tblack1 px-5 py-1.5 rounded-lg dark:text-dark-gray-2">
+                {{hero_section:hero_designation}} </h3>
+            <div class="flex justify-center space-x-3">
+                {{hero_section:hero_fa_icon}}
+                <a href="{{fa_icon_link}}" target="_blank" rel="noopener noreferrer">
+                    <span style="color:{{ text_color }}" class="socialbtn rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                        <i class="fa-brands {{fa_icon}}"></i>
+                    </span>
+                </a>
+                {{/hero_section:hero_fa_icon}}
+            </div>
+            <div class="p-7 rounded-2xl mt-7 bg-light-gray dark:bg-dark-tblack1 divide-y divide-gary-4 dark:divide-dark-gray-4">
+                {{hero_section:details}}
+                {{if index == 0}}
+                <a href="mailto:%77%61%76%65%40%77%69%6c%6c%6f%2e%63%6f%2e%6e%7a" class="group">
+                    <div class="flex py-2.5">
+                        <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
+                            <i class="fa-solid {{fa_icon}}"></i>
+                        </span>
+
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> {{details_title}} </p>
+                            <p class="dark:text-white group-hover:text-brand-orange bot-trap">wave@willo<b>.trap</b>.co.nz</p>
+                        </div>
+                    </div>
+                </a>
+                {{elseif index == 1}}
+                <div class="group">
+                    <div class="flex py-2.5 border-t border-t-gary-4 dark:border-t-dark-gray-4">
+                        <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md from-brand-orange to-brand-red">
+                            <i class="fa-solid {{fa_icon}}"></i>
+                        </span>
+                        <div class="text-left ml-2.5">
+                            <p class="text-xs text-gary-5 dark:text-dark-gray-2"> {{details_title}} </p>
+                            <p class="dark:text-white">{{details_description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                <div class="flex py-2.5">
+                    <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
+                        <i class="fa-solid {{fa_icon}}"></i>
+                    </span>
+                    <div class="text-left ml-2.5">
+                        <p class="text-xs text-gary-5 dark:text-dark-gray-2"> {{details_title}} </p>
+                        <p class="dark:text-white">{{details_description}}</p>
+                    </div>
+                </div>
+                {{/if}}
+                {{/hero_section:details}}
+            </div>
+            <a href="{{hero_section:resume_pdf}}" download> 
+                <button class="dowanload-btn inline-flex items-center mx-auto bg-gradient-to-r from-brand-orange to-brand-red duration-200 transition ease-linear hover:bg-gradient-to-l from-brand-red to-brand-red-2 px-8 py-3 text-lg text-white rounded-5xl mt-6">
+                <img class="mr-3" src="{{hero_section:button_image}}" alt="{{hero_section:button_image:title}}" title="Icon" height="23" width="22" /> {{hero_section:button_text}}
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

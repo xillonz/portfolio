@@ -1,0 +1,42 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: footer_section_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Title
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: footer_section_link_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Link Text'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: footer_section_text_link
+            field:
+              type: link
+              display: 'Text Link'
+              icon: link
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

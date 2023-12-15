@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+[x-cloak] {
+    display: 'none !important'
+}
+
+/* This is all you. */
+
+.bot-trap b{
+    display: none;
+}

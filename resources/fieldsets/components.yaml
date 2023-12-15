@@ -1,0 +1,77 @@
+title: Components
+fields:
+  -
+    handle: components
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            about_section:
+              display: 'About Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: about_section
+            what_i_do:
+              display: 'What I DO'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: what_i_do
+            client_image_section:
+              display: 'Client Image Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: client_image_section
+            resume_section:
+              display: 'Resume Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: resume_section
+            skills_knowledge_section:
+              display: 'Skills Knowledge Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: skills_knowledge_section
+            contact_section:
+              display: 'Contact Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: contact_section
+            blog_section:
+              display: 'Blog Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: blog_section
+            portfolio_listing_section:
+              display: 'Portfolio Listing Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: portfolio_listing_section
+      type: replicator
+      display: Components
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

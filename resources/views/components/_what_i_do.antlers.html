@@ -1,0 +1,24 @@
+<div class="py-12 px-5 lg:px-14 bg-white dark:bg-dark-tblack">
+    <h3 class="text-4xl dark:text-white font-bold font-robotoSlab pb-5"> {{what_i_do_title}} </h3>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+        {{what_i_do_grid}}
+        <div x-show="!darkMode" style="background-color: {{ what_i_do_grid_bg_color }}" class="dark:bg-transparent about-box flex gap-4 rounded-xl p-6">
+            <img class="w-10 h-10 object-contain block" src="{{what_i_do_grid_image}}"
+            alt="{{what_i_do_grid_image:title}}" height="40" width="40" />
+            <div class="space-y-2">
+                <h3 class="dark:text-white text-xl font-semibold"> {{what_i_do_grid_title}} </h3>
+                <p class="leading-8 text-gary-5 dark:text-dark-gray-2"> {{what_i_do_grid_description}} </p>
+            </div>
+        </div>
+
+        <div x-show="darkMode" class="dark:bg-transparent about-box flex gap-4 rounded-lg dark:border-dark-gray-3 dark:border-2 p-6">
+            <img class="w-10 h-10 object-contain block" src="{{what_i_do_grid_image}}"
+            alt="{{what_i_do_grid_image:title}}" height="40" width="40" />
+            <div class="space-y-2">
+                <h3 class="dark:text-white text-xl font-semibold"> {{what_i_do_grid_title}} </h3>
+                <p class="leading-8 text-gary-5 dark:text-dark-gray-2"> {{what_i_do_grid_description}} </p>
+            </div>
+        </div>
+        {{/what_i_do_grid}}
+    </div>
+</div>

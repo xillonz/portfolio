@@ -1,0 +1,222 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: hero_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Image
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - image
+          -
+            handle: hero_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: hero_designation
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Designation
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: hero_fa_icon
+            field:
+              fields:
+                -
+                  handle: fa_icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Icon
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: fa_icon_link
+                  field:
+                    type: link
+                    display: 'Icon Link'
+                    icon: link
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: text_color
+                  field:
+                    swatches:
+                      - '#1773EA'
+                      - '#1C9CEA'
+                      - '#e14a84'
+                      - '#0072b1'
+                    allow_any: true
+                    default: '#1773EA'
+                    type: color
+                    display: 'Text Color'
+                    icon: color
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+              mode: stacked
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: 'Fa Icon'
+              icon: grid
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: details
+            field:
+              fields:
+                -
+                  handle: fa_icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Fa Icon'
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: details_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: details_description
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Description
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: details_text_color
+                  field:
+                    swatches:
+                      - '#E93B81'
+                      - '#6AB5B9'
+                      - '#FD7590'
+                      - '#C17CEB'
+                    allow_any: true
+                    type: color
+                    display: 'Text Color'
+                    icon: color
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+              mode: stacked
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: Details
+              icon: grid
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: button_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Button Image'
+              icon: assets
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - image
+          -
+            handle: button_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Button Text'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: resume_pdf
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: resume_pdf
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - 'mimes:pdf'
+              max_files: 1

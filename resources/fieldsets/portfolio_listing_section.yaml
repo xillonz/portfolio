@@ -1,0 +1,19 @@
+title: 'Portfolio Listing Section'
+fields:
+  -
+    handle: select_category
+    field:
+      max_items: 4
+      mode: default
+      create: true
+      taxonomies:
+        - portfolio_category
+      type: terms
+      display: 'Select Category'
+      icon: taxonomy
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - 'min:4'

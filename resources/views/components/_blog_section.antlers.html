@@ -1,0 +1,145 @@
+<div x-data="{ 'showModal': null }">
+    <div class="col-span-12 lg:col-span-8 ">
+        <section class="bg-white lg:rounded-tl-2xl lg:rounded-tr-2xl dark:bg-dark-tblack">
+            <div class="container pt-12 md:py-12 px-5 md:px-10 lg:px-14 mx-auto">
+                <div class="pb-12">
+                    <h2
+                        class="after-effect text-4xl font-bold relative lg:after:'' after:absolute after:top-1/2 after:w-48 after:h-0.5 after:rounded-sm lg:after:bg-gradient-to-r from-brand-orange to-brand-red lg:after:left-52 dark:text-white">
+                        {{title}}</h2>
+                    <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-8 grid gap-x-10 gap-y-7 mb-6">
+                        <!-- blog items one start -->
+                        {{collection:blogs paginate="2" as="posts" }}
+                        {{posts}}
+                        <div
+                            class="p-5 rounded-lg mb-2 h-full bg-gray-9 dark:bg-transparent dark:border-dark-gray-3 dark:border-2">
+                            <div class="overflow-hidden rounded-lg">
+                                <a @click="showModal = '{{index}}'">
+                                    <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                        src="{{blog_image}}" alt="{{blog_image:title}}" height="300" width="300" />
+                                </a>
+                            </div>
+                            <div class="flex mt-4 text-tiny text-gray-lite dark:text-dark-gray-2">
+                                <span>{{ date format=" jS F" }}</span>
+                                {{category}}
+                                <span class="dot-icon">{{title}}</span>
+                                {{/category}}
+                            </div>
+                            <h3
+                                class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-brand-orange dark:hover:text-brand-orange">
+                                <a @click="showModal = '{{index}}'">{{title}}.</a>
+                            </h3>
+                        </div>
+
+
+                        <div id="ex1_{{index}}" x-show="showModal === '{{index}}'"
+                            class="fixed flex items-center justify-center bg-black bg-opacity-50 modal-container modal left-1/2 top-0 -translate-x-1/2 w-full pt-10 z-10 h-full px-5">
+                            <div class="w-full md:w-10/12 flex items-center lg:w-850 bg-white dark:bg-dark-black2 mx-auto rounded-xl p-4 md:p-8 shadow-lg relative">
+                                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[80vh]">
+                                    <div class="pr-3 pb-2">
+                                        <img class="w-full md:h-450 object-cover rounded-xl mt-6" src="{{blog_image}}"
+                                            alt="{{blog_image:title}}" height="450" width="714" />
+                                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                                            <span>{{ date format=" jS F" }}</span>
+                                            {{category}}
+                                            <span class="dot-icon">{{title}}</span>
+                                            {{/category}}
+                                        </div>
+                                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium">{{title}}.</h2>
+                                        {{# <article
+                                            class="prose prose-gray dark:text-white font-normal text-15xl sm:text-sm my-4">
+                                            {{blog_details}}</article> #}}
+    
+                                        {{ partial:typography/prose as="article" class="dark:text-white font-normal
+                                        text-15xl sm:text-sm my-4" }}
+                                        {{ blog_details }}
+                                        {{ /partial:typography/prose }}
+                                    </div>
+                                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                                        <h6 class="dark:text-white text-xl">Login with:</h6>
+                                        <div class="flex space-x-3">
+                                            <a href="{{ social:facebook:share }}" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1773EA] rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </span>
+                                            </a>
+                                            <a href="{{ social:twitter:share }}" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1C9CEA] rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </span>
+                                            </a>
+                                            <a href="{{ social:linkedin:share }}" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#0072b1] rounded-md transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red bg-light-gray h-10 w-10 inline-flex text-center items-center justify-center">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" @click="showModal = null" class="close absolute md:top-0 -top-10 right-0 md:-right-16 h-9 w-9 z-20">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-4xl cursor-pointer absolute right-2 top-0 text-white transition transform hover:rotate-45 duration-300 ease-in-out" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                        {{/posts}}
+                        <div class="flex flex-wrap justify-start items-center gap-2.5 col-auto sm:col-span-2">
+                            {{ paginate }}
+                            {{ section:pagination }}
+                            {{ if prev_page }}
+                            {{ if current_page == 2 }}
+                            <link rel="prev" href="{{ prev_page | substr(0,-7) }}">
+                            {{ else }}
+                            <link rel="prev" href="{{ prev_page }}">
+                            {{ /if }}
+                            {{ /if }}
+                            {{ if next_page }}
+                            <link rel="next" href="{{ next_page }}">
+                            {{ /if }}
+                            {{ /section:pagination }}
+                            <div class="list-unstyled text-center gap-2 flex flex-wrap justify-center">
+                                {{ if prev_page }}
+                                {{ if current_page == 2 }}
+
+                                <a href="{{ current_url }}"
+                                    class=" {{ view:pageNumberClass }}  w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray rounded-md mx-1 shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray ">
+                                    << /a>
+                                        {{ else }}
+                                        <a href="{{ prev_page }}"
+                                            class=" {{ view:pageNumberClass }}   w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray rounded-md mx-1 shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray">
+                                            << /a>
+                                                {{ /if }}
+                                                {{ /if }}
+                                                {{ links:segments }}
+
+                                                {{ first }}
+                                                {{ partial:common_sections/pages}}
+                                                {{ /first }}
+
+                                                {{ if slider }}
+                                                <span class="disabled">...</span>
+                                                {{ /if }}
+
+                                                {{ slider }}
+                                                {{ partial:common_sections/pages}}
+                                                {{ /slider }}
+
+                                                {{ if slider || (!slider && last) }}
+                                                <a href="#" class="disabled {{ view:pageNumberClass }}">...</a>
+                                                {{ /if }}
+
+                                                {{ last }}
+                                                {{ partial:common_sections/pages}}
+                                                {{ /last }}
+                                                {{ if next_page }}
+                                                    <a href="{{ next_page }}" class=" {{ view:pageNumberClass }}    w-10 h-10 md:w-8 md:h-8 inline-flex justify-center items-center bg-light-gray mx-1 rounded-md shadow-standard hover:bg-black hover:text-white hover:shadow-standard-gray "> > </a>
+                                                {{ /if }}
+                                                {{ /links:segments }}
+                            </div>
+                            {{ /paginate }}
+                        </div>
+                        {{/collection:blogs}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

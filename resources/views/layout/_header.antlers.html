@@ -1,0 +1,15 @@
+<header class="lg:w-560 h-36 hidden lg:block p-8 ml-auto mb-10 rounded-2xl bg-white dark:bg-dark-tblack">
+    <nav class="hidden lg:block">
+        <ul class="flex gap-4">
+            {{nav:main}}
+            <li class="inline-block w-full">
+                <a class="{{ if is_current }} menu-active bg-gradient-to-r from-brand-orange to-brand-red text-white dark:text-white {{else}} menu-item {{ endif }} w-full h-20 rounded-xl font-poppins bg-light-gray font-medium text-xtiny text-gary-5 dark:text-dark-gray-2 justify-center flex flex-col items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-dark-gray-3 hover:text-white hover:bg-gradient-to-r from-brand-orange to-brand-red " href="{{url}}">
+                    <span class="text-xl mb-1">
+                        <i class="{{nav_fa_icon}}"></i>
+                    </span> {{title}}
+                </a>
+            </li>
+            {{/nav:main }}
+        </ul>
+    </nav>
+</header>

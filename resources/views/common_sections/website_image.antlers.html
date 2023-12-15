@@ -1,0 +1,38 @@
+{{# <div class="section-bg">
+    <div class="w-full flex justify-between px-4">
+        <a href="/">
+            <img class="h-26 lg:h-8" src="{{website_icon:website_icon_image}}"
+                alt="{{website_icon:website_icon_image:title}}" height="32" width="153" />
+        </a>
+        <div class="flex items-center" x-cloak x-data="{ show: false }">
+            <button id="" type="button" @click="darkMode = !darkMode" class="dark-light-btn">
+                <i x-show="!darkMode" id="" x-cloak class="fa-solid text-xl fa-moon"></i>
+                <i x-show="darkMode" id="" x-cloak class="fa-solid fa-sun text-xl"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="menu-toggle-btn lg:hidden" x-on:click="show = !show">
+                <i x-show="show" class="fa-solid fa-xmark text-xl"></i>
+                <i x-show="!show" class="fa-solid fa-bars text-xl"></i>
+            </button>
+            {{partial:layout/mobileheader}}
+        </div>
+    </div>
+</div> #}}
+<div
+    class="max-w-screen-xl w-full bg-light-gray dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-50 mx-auto">
+    <div class="w-full flex justify-between px-4">
+        <a href="/">
+            {{# <img alt="{{website_icon:website_icon_image:alt}}" src="{{website_icon:website_icon_image}}" width="153" height="26" class="h-26 lg:h-8" style="color: transparent;"> #}}
+        </a>
+        <div class="flex items-center" x-data="{ show: false }">
+            <button id="" type="button" @click="darkMode = !darkMode" class="bg-white w-10 hover:text-white h-10 rounded-full lg:flex justify-center items-center text-black hover:bg-brand-red transition-all duration-300 ease-in-out cursor-pointer ml-2 dark-light-btn">
+                <i x-show="!darkMode" id="" x-cloak class="fa-solid text-xl fa-moon"></i>
+                <i x-show="darkMode" id="" x-cloak class="fa-solid fa-sun text-xl"></i>
+            </button>
+            <button id="menu-toggle" type="button" class="menu-toggle-btn lg:hidden lg:opacity-0 lg:invisible visible opacity-100 bg-brand-red w-10 h-10 rounded-full flex justify-center cursor-pointer items-center text-white dark:text-white text-2xl ml-3" x-on:click="show = !show">
+                <svg  x-show="!show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg>
+                <svg  x-show="show" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg>
+            </button>
+            {{partial:layout/mobileheader}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+title: 'Resume Section'
+fields:
+  -
+    handle: learning_grid
+    field:
+      fields:
+        -
+          handle: learning_grid_title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+        -
+          handle: resume_section_fa_icon
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: 'Fa Icon'
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+        -
+          handle: learning_details_grid
+          field:
+            fields:
+              -
+                handle: learning_details_grid_bg_color
+                field:
+                  allow_any: true
+                  type: color
+                  display: 'Bg Color'
+                  icon: color
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  hide_display: false
+                  swatches:
+                    - '#fff4f4'
+                    - '#fff1fb'
+                    - '#eef5fa'
+                    - '#f2f4ff'
+              -
+                handle: learning_details_grid_year
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Year
+                  icon: text
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  hide_display: false
+              -
+                handle: learning_details_grid_title
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Title
+                  icon: text
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  hide_display: false
+              -
+                handle: learning_details_grid_univercity
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Univercity
+                  icon: text
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  hide_display: false
+            mode: stacked
+            reorderable: true
+            fullscreen: true
+            type: grid
+            display: 'Learning Details Grid'
+            icon: grid
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Learning Grid'
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

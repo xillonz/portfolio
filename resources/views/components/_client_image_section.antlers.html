@@ -1,0 +1,44 @@
+<div class="splide px-5 lg:px-14 pb-10 bg-white dark:bg-dark-tblack">
+    <h3 class="dark:text-white text-4xl mb-8 font-semibold"> {{client_title}} </h3>
+    <div class="splide__track bg-gray-6 dark:bg-dark-gray-6 max-w-full h-auto py-10 rounded-xl">
+        <ul class="splide__list slickOne text-center px-2 pt-8">
+            {{client_image_grid}}
+                <li class="splide__slide overflow-hidden brand-img"><img src="{{client_image_grid_image}}"
+                    alt="{{client_image_grid_image:title}}" /></li>
+            {{/client_image_grid}}
+        </ul>
+    </div>
+</div>
+
+
+{{ once }}
+    {{ push:scripts }}
+        {{ vite src="resources/js/splide.js" }}
+    {{ /push:scripts }}
+{{ /once }}
+<script>
+    document.addEventListener('turbo:load', function () {
+        var splide =  new Splide('.splide',{
+            arrows: false,
+            perPage: 4,
+            autoplay:true,
+            pagination: false,
+            type: 'loop',
+            gap: '2rem',
+            padding: 30,
+            breakpoints: {
+                1024: {
+                    perPage: 3,
+                },
+                767: {
+                    perPage: 2,
+        
+                },
+            }
+        });
+        splide.mount();
+    });
+</script>
+
+
+

@@ -1,0 +1,35 @@
+<div class="lg:rounded-tl-2xl lg:rounded-tr-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-14 pb-12 dark:bg-dark-tblack">
+    <h2 class="after-effect text-4xl font-bold relative lg:after:'' after:absolute lg:after:w-48 after:h-0.5 after:rounded-sm lg:after:bg-gradient-to-r from-brand-orange to-brand-red lg:after:left-60 after:top-[76px] mb-12 md:mb-8 pt-12 dark:text-white">
+        {{title}} 
+    </h2>
+    <div class="pt-7 dark:border-dark-gray-3 dark:border-2 bg-gray-6 md:p-12 p-4 dark:bg-dark-tblack rounded-2xl">
+        <h3 class="text-2xl">
+            <span class="text-gary-5 dark:text-dark-gray-2">{{contact_heading}}</span>
+            <span class="font-semibold dark:text-white">{{contact_sub_heading}}</span>
+        </h3>
+        {{ form:create :in="form_field:handle" class="mt-10" id="contactinformation-form"}}
+            {{ fields }}
+            <div class="relative z-0 w-full mt-10 mb-8 group">
+                    <label class="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-brand-red-2 peer-focus:dark:text-brand-red-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"><b>{{ display }}<sup>*</sup></b></label>         
+                      {{ field }}               
+            </div>
+            {{ /fields }}
+            <input type="submit" class="px-6 py-2 rounded-lg border-2 mt-6 border-dark-gray-2 font-semibold cursor-pointer hover:bg-gradient-to-r from-brand-orange to-brand-red hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
+                value="Submit" />
+            {{if success}}
+                <div class="bg-green-300 text-white p-2 mt-4">
+                    {{ success }}
+                </div>
+            {{/if}}
+            {{ if errors }}
+                <div class="bg-red-300 text-white p-2 mt-4">
+                {{ errors }}
+                    {{ value }}<br>
+                {{ /errors }}
+                </div>
+            {{ /if }}
+        {{ /form:create }}
+    </div>
+</div>
+
+

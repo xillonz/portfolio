@@ -1,0 +1,87 @@
+title: 'What I DO'
+fields:
+  -
+    handle: what_i_do_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: what_i_do_grid
+    field:
+      fields:
+        -
+          handle: what_i_do_grid_bg_color
+          field:
+            allow_any: true
+            type: color
+            display: 'Bg Color'
+            icon: color
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            swatches:
+              - '#fcf4ff'
+              - '#fefaf0'
+              - '#fff4f4'
+              - '#fff0f8'
+              - '#f3faff'
+        -
+          handle: what_i_do_grid_image
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Image
+            icon: assets
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            validate:
+              - image
+        -
+          handle: what_i_do_grid_title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+        -
+          handle: what_i_do_grid_description
+          field:
+            antlers: false
+            type: textarea
+            display: Description
+            icon: textarea
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'What I Do Grid'
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

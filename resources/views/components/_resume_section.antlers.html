@@ -1,0 +1,31 @@
+<div class="lg:container px-5 md:px-10 lg:px-14 mx-auto bg-white lg:rounded-tl-2xl lg:rounded-tr-2xl dark:bg-dark-tblack">
+    <div class="py-12">
+        <h2 class="after-effect text-4xl font-bold relative lg:after:'' after:absolute after:top-1/2 lg:after:w-48 after:h-0.5 after:rounded-sm lg:after:bg-gradient-to-r from-brand-orange to-brand-red lg:after:left-44 dark:text-white">{{title}}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-8">
+            {{learning_grid}}
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i class="fa-solid text-xl text-brand-red {{resume_section_fa_icon}}"></i>
+                    <h4 class="text-2xl dark:text-white font-medium"> {{learning_grid_title}} </h4>
+                </div>
+                {{learning_details_grid}}
+                <div x-show="!darkMode" style="background-color: {{ learning_details_grid_bg_color }}"
+                    class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg">
+                    <span class="text-tiny text-gray-lite">{{learning_details_grid_year}}</span>
+                    <h3 class="text-xl"> {{learning_details_grid_title}} </h3>
+                    <p> {{learning_details_grid_univercity}} </p>
+                </div>
+
+                <div x-show="darkMode"
+                    class="dark:bg-[#111111] py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-dark-gray-3 dark:border-2">
+                    <span class="dark:text-[#b7b7b7]">{{learning_details_grid_year}}</span>
+                    <h3 class="dark:text-white text-xl"> {{learning_details_grid_title}} </h3>
+                    <p class="dark:text-[#b7b7b7]"> {{learning_details_grid_univercity}} </p>
+                </div>
+                {{/learning_details_grid}}
+            </div>
+            {{/learning_grid}}
+        </div>
+    </div>
+</div>
+

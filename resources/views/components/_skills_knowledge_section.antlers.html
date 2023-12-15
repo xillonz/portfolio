@@ -1,0 +1,26 @@
+<div class="lg:container bg-color-810 dark:bg-dark-gray-6 py-12 px-5 md:px-10 lg:px-20 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {{# <div class="col-span-1">
+            <h4 class="text-2xl dark:text-white font-medium mb-6"> {{skills_knowledge_section_title}} </h4>
+            {{skills_grid}}
+            <div class="mb-5">
+                <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-gary-5 dark:text-dark-gray-2">{{skill_name}}</span>
+                    <span class="font-semibold text-gary-5 dark:text-dark-gray-2">{{skill_number}}%</span>
+                </div>
+                <div class="w-full bg-gray-8 rounded-full h-1 dark:bg-dark-gray-8">
+                    <div style="background-color: {{ skill_bg_color }}" class="h-1 rounded-full" style="width: {{skill_number}}%"></div>
+                </div>
+            </div>
+            {{/skills_grid}}
+        </div> #}}
+        <div class="col-span-2">
+            <h4 class="text-2xl dark:text-white font-medium mb-8"> {{knowledge_title_1}} </h4>
+            <div class="flex gap-y-5 gap-x-2.5 flex-wrap">
+                {{knowledge_grid}}
+                <button class="resume-btn bg-light-gray px-5 py-2 rounded-lg text-gary-5">{{knowledge_name}}</button>
+                {{/knowledge_grid}}
+            </div>
+        </div>
+    </div>
+</div>

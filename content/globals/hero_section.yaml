@@ -1,0 +1,32 @@
+title: 'Hero Section'
+data:
+  hero_image: willo.jpg
+  hero_name: 'Willo Hooper'
+  hero_designation: 'Web Developer'
+  hero_fa_icon:
+    -
+      id: ljfgya63
+      fa_icon: fa-linkedin-in
+      fa_icon_link: 'https://www.linkedin.com/in/willo-hooper-91b95579/'
+      text_color: '#0072b1'
+    -
+      id: lp0n80ji
+      fa_icon: fa-github
+      fa_icon_link: 'https://github.com/xillonz'
+      text_color: '#e14a84'
+  details:
+    -
+      id: ljfgzpyf
+      fa_icon: fa-envelope-open-text
+      details_title: Email
+      details_description: 'hardcoded for now'
+      details_text_color: '#6AB5B9'
+    -
+      id: ljfh08a1
+      fa_icon: fa-location-dot
+      details_title: Location
+      details_description: 'Auckland, New Zealand'
+      details_text_color: '#FD7590'
+  button_image: dowanload.png
+  button_text: 'Download CV'
+  resume_pdf: willo-hooper-resume-1702589703.pdf
