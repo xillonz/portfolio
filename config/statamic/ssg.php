@@ -58,7 +58,8 @@ return [
 
     'urls' => [
         '/resume',
-        '/portfolio'
+        '/portfolio',
+        '/sp'
     ],
 
     /*
