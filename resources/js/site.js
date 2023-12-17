@@ -4,7 +4,16 @@ import Alpine from 'alpinejs'
  
 window.Alpine = Alpine
 
+let darkMode
 
-{ darkMode: localStorage.getItem('dark') === 'true'}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkMode = true
+}
+
+if(!darkMode && localStorage.getItem('dark') === 'true'){
+    darkMode = true
+}
+
+{ darkMode }
 
 Alpine.start()
