@@ -31,15 +31,16 @@ class AppServiceProvider extends ServiceProvider
             $to = config('statamic.ssg.destination').'/assets';
         
             app('files')->copyDirectory($from, $to);
-            // or
-            app('files')->link($from, $to);
 
             $from = public_path('sp');
             $to = config('statamic.ssg.destination').'/sp';
         
             app('files')->copyDirectory($from, $to);
-            // or
-            app('files')->link($from, $to);
+
+            $from = public_path('domain').'/CNAME';
+            $to = config('statamic.ssg.destination').'/CNAME';
+        
+            app('files')->copy($from, $to);
         });
     }
 }
