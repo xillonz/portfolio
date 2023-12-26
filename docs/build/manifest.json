@@ -8,12 +8,12 @@
     "src": "public/assets/bgtwo.jpg"
   },
   "resources/css/site.css": {
-    "file": "assets/site-28c8e0ab.css",
+    "file": "assets/site-acda55b7.css",
     "isEntry": true,
     "src": "resources/css/site.css"
   },
   "resources/js/site.js": {
-    "file": "assets/site-e5c44fe7.js",
+    "file": "assets/site-960c9a52.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   },
