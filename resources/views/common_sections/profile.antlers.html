@@ -23,19 +23,19 @@
             <div class="p-7 rounded-2xl mt-7 bg-light-gray dark:bg-dark-tblack1 divide-y divide-gary-4 dark:divide-dark-gray-4">
                 {{hero_section:details}}
                 {{if index == 0}}
-                <a href="tel:{{details_description}}" class="group">
+                <a href="mailto:%77%61%76%65%40%77%69%6c%6c%6f%2e%63%6f%2e%6e%7a" class="group">
                     <div class="flex py-2.5">
                         <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
                             <i class="fa-solid {{fa_icon}}"></i>
                         </span>
                         <div class="text-left ml-2.5">
                             <p class="text-xs text-gary-5 dark:text-dark-gray-2"> {{details_title}} </p>
-                            <p class="dark:text-white group-hover:text-brand-orange">{{details_description}}</p>
+                            <p class="dark:text-white group-hover:text-brand-orange bot-trap">wave@willo<b>.trap</b>.co.nz</p>
                         </div>
                     </div>
                 </a>
                 {{ elseif index== 1}}
-                <a href="mailto:{{details_description}}" class="group">
+                <div class="group">
                     <div class="flex py-2.5 border-t border-t-gary-4 dark:border-t-dark-gray-4">
                         <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
                             <i class="fa-solid {{fa_icon}}"></i>
@@ -45,7 +45,7 @@
                             <p class="dark:text-white group-hover:text-brand-orange">{{details_description}}</p>
                         </div>
                     </div>
-                </a>
+                </div>
                 {{else}}
                 <div class="flex py-2.5">
                     <span style="color: {{ details_text_color }}" class="socialbtn bg-white dark:bg-black dark:text-white shadow-md h-10 w-10 inline-flex items-center justify-center rounded-md hover:!text-white hover:bg-gradient-to-r from-brand-orange to-brand-red">
